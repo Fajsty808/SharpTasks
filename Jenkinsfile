@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/Fajsty808/SharpTasks.git'
+        git branch: 'main', url: 'https://github.com/Fajsty808/SharpTasks.git'
       }
     }
     stage('Restore') {
