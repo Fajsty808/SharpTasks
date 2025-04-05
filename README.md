@@ -1,7 +1,7 @@
 # 🧠 SharpTasks – Simple Todo API in C# (.NET 9)
 
 A lightweight RESTful API built with **C# and .NET 9**, designed for learning and experimenting with **CI/CD using Jenkins**.  
-No database required – tasks are stored in memory.
+No database required (maybe adding later) – tasks are stored in memory.
 
 ---
 
