@@ -8,12 +8,16 @@ pipeline {
     }
     stage('Restore') {
       steps {
-        sh 'dotnet restore'
+        dir('SharpTasks') {
+          sh 'dotnet restore'
+        }
       }
     }
     stage('Build') {
       steps {
-        sh 'dotnet build --no-restore'
+        dir('SharpTasks') {
+          sh 'dotnet build --no-restore'
+        }
       }
     }
   }
