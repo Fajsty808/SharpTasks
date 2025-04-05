@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/Fajsty808/SharpTasks.git'
+        git branch: 'main', url: 'https://github.com/Fajsty808/SharpTasks.git'
       }
     }
     stage('Restore') {
       steps {
-        bat 'dotnet restore'
+        sh 'dotnet restore'
       }
     }
     stage('Build') {
       steps {
-        bat 'dotnet build --no-restore'
+        sh 'dotnet build --no-restore'
       }
     }
   }
