@@ -41,3 +41,21 @@ No database required (maybe adding later) – tasks are stored in memory.
 ```bash
 git clone https://github.com/your-username/SharpTasks.git
 cd SharpTasks
+```
+### 🐳 Jenkins-dotnet Setup
+
+
+# 🛠️ After Dockerfile changes (rebuild the image)
+```bash
+docker build -t jenkins-dotnet -f "C:\YOUR-PATH-TO-DOCKERFILE\Dockerfile" .
+```
+
+# 🏗️ First-time run (create container)
+```bash
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins-dotnet --user root -v jenkins_home:/var/jenkins_home jenkins-dotnet
+```
+
+# 🔄 After reboot (just restart the container)
+```bash
+docker start jenkins-dotnet
+```
