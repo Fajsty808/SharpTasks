@@ -65,7 +65,7 @@ namespace SharpTasks.Tests
         }
 
         [Fact]      
-    public void DeleteTask_SuccessfullyDeletesTask()
+        public void DeleteTask_SuccessfullyDeletesTask()
             {
                 // Given
                 var task = new TaskItem { Id = Guid.NewGuid(), Title = "Test Task" };
