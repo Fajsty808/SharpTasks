@@ -1,15 +1,19 @@
-﻿using SharpTasks.Models;
-using SharpTasks.Services;
+﻿using SharpTasks.Services;
 
+var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-namespace SharpTasks
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("🔥 Hello from SharpTasks, powered by Jenkins! 🔥");
-        }
-    }
-}
+// Register TaskService
+builder.Services.AddSingleton<TaskService>();
+
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
