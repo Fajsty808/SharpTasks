@@ -20,5 +20,12 @@ pipeline {
         }
       }
     }
+    stage('Test') {
+      steps {
+        dir('SharpTasks') {
+          sh 'dotnet test --no-build --verbosity normal'
+        }
+      }
+    }
   }
 }
