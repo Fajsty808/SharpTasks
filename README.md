@@ -81,7 +81,6 @@ Create a new task by sending a JSON payload.
 {
   "id": "GUID",         // Optional – can be generated on backend
   "title": "Buy milk",
-  "description": "2 liters of whole milk",
   "isCompleted": false
 }
 ```
@@ -127,7 +126,6 @@ Update a task. The `id` in the URL must match the one in the request body.
 {
   "id": "GUID",
   "title": "Buy almond milk",
-  "description": "1 liter",
   "isCompleted": false
 }
 ```
