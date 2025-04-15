@@ -30,9 +30,8 @@ No database required (maybe adding later) – tasks are stored in memory.
 ### 1. Prerequisites
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) or other IDE 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) *(for Jenkins)*
-- Git
 
 ---
 
@@ -42,7 +41,7 @@ No database required (maybe adding later) – tasks are stored in memory.
 git clone https://github.com/your-username/SharpTasks.git
 cd SharpTasks
 ```
-###  Jenkins-dotnet Setup
+### 3. Jenkins-dotnet Setup
 
 #### After Dockerfile changes (rebuild the image)
 ```bash
